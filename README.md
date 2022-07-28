@@ -1,1 +1,1 @@
-# legacy-widgets-menus-for-fse
+# legacy widgets and menus for FSE
