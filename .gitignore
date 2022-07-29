@@ -1,0 +1,12 @@
+# Directories
+/.vscode
+/tmp
+/vendor
+
+# Files
+.DS_Store
+.phpunit.result.cache
+composer.lock
+DB-CONFIG
+LICENSE-CODES
+Thumbs.db
