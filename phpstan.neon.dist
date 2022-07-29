@@ -1,0 +1,11 @@
+includes:
+	- phar://phpstan.phar/conf/bleedingEdge.neon
+	- vendor/wpsyntex/polylang-phpstan/extension.neon
+parameters:
+	level: max
+	paths:
+		- %currentWorkingDirectory%/src
+		- %currentWorkingDirectory%/legacy-features-fse.php
+	bootstrapFiles:
+		- vendor/wpsyntex/polylang-stubs/polylang-stubs.php
+	ignoreErrors:
