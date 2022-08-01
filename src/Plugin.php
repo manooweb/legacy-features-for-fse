@@ -59,7 +59,10 @@ final class Plugin {
 		 */
 		do_action_ref_array( 'legacy_features_for_fse_before_init', [ &$this ] );
 
-		$this->addHooks();
+		if ( wp_is_block_theme() ) {
+			// Loads the plugin only if the theme is a block theme.
+			$this->addHooks();
+		}
 
 		/**
 		 * Fires after the plugin init.
