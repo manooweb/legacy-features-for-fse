@@ -195,7 +195,7 @@ final class Plugin {
 	}
 
 	/**
-	 * Allows to display the menus and widgets admin pages.
+	 * Allows to display the menus admin page.
 	 *
 	 * @since 1.0
 	 *
@@ -203,6 +203,5 @@ final class Plugin {
 	 */
 	public function supportMenusAndWidgets() {
 		add_theme_support( 'menus' );
-		add_theme_support( 'widgets' );
 	}
 }
