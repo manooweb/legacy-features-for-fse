@@ -86,6 +86,7 @@ final class Plugin {
 		add_action( 'admin_print_footer_scripts', [ $this, 'adminFooterScripts'] );
 		add_action( 'admin_footer', [ $this, 'adminFooterWidgets' ] );
 		add_action( 'enqueue_block_editor_assets', [ $this, 'editorAssets' ] );
+		add_action( 'after_setup_theme', [ $this, 'supportMenusAndWidgets' ] );
 	}
 
 	/**
@@ -188,5 +189,17 @@ final class Plugin {
 		if ( get_current_screen()->is_block_editor() ) {
 			do_action( 'admin_footer-widgets.php' );
 		}
+	}
+
+	/**
+	 * Allows to display the menus and widgets admin pages.
+	 *
+	 * @since 1.0
+	 *
+	 * @return void
+	 */
+	public function supportMenusAndWidgets() {
+		add_theme_support( 'menus' );
+		add_theme_support( 'widgets' );
 	}
 }
