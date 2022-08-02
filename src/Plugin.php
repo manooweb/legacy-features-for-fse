@@ -129,7 +129,7 @@ final class Plugin {
 	 * @return void
 	 */
 	public function adminStyles() {
-		if ( $this->is_block_editor() ) {
+		if ( $this->isBlockEditor() ) {
 			do_action( 'admin_print_styles-widgets.php' );
 		}
 	}
@@ -142,7 +142,7 @@ final class Plugin {
 	 * @return void
 	 */
 	public function adminScripts() {
-		if ( $this->is_block_editor() ) {
+		if ( $this->isBlockEditor() ) {
 			do_action( 'load-widgets.php' );
 			do_action( 'widgets.php' );
 			do_action( 'sidebar_admin_setup' );
@@ -158,7 +158,7 @@ final class Plugin {
 	 * @return void
 	 */
 	public function adminFooterScripts() {
-		if ( $this->is_block_editor() ) {
+		if ( $this->isBlockEditor() ) {
 			do_action( 'admin_print_footer_scripts-widgets.php' );
 		}
 	}
@@ -171,7 +171,7 @@ final class Plugin {
 	 * @return void
 	 */
 	public function adminFooterWidgets() {
-		if ( $this->is_block_editor() ) {
+		if ( $this->isBlockEditor() ) {
 			do_action( 'admin_footer-widgets.php' );
 		}
 	}
@@ -194,7 +194,7 @@ final class Plugin {
 	 *
 	 * @return boolean True if the current screen runs the block editor, false otherwise.
 	 */
-	private function is_block_editor() {
+	private function isBlockEditor() {
 		$current_screen = get_current_screen();
 
 		if ( ! empty( $current_screen ) ) {
