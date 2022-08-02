@@ -19,7 +19,11 @@
  * License:           GPL v3 or later
  * License URI:       https://www.gnu.org/licenses/gpl-3.0.txt
  *
- * Copyright 2021 WP SYNTEX
+ * Copyright 2022 WP SYNTEX
+ *
+ * This program incorporates work from the plugin Legacy Widget Block
+ * Copyright 2022 Justin Tadlock (email : justintadlock@gmail.com)
+ * Legacy Widget Block is released under the GPL V2 or later.
  */
 
 namespace WP_Syntex\Legacy_Features_for_FSE;
