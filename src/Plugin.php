@@ -25,24 +25,6 @@ final class Plugin {
 	const VERSION = '1.0';
 
 	/**
-	 * The plugin URL.
-	 *
-	 * @var string
-	 */
-	private $url;
-
-	/**
-	 * Constructor.
-	 *
-	 * @since 1.0
-	 *
-	 * @return void
-	 */
-	public function __construct() {
-		$this->url = plugin_dir_url( LFFF_FILE );
-	}
-
-	/**
 	 * Plugin init.
 	 *
 	 * @since 1.0
@@ -106,7 +88,7 @@ final class Plugin {
 		// Editor stylesheet.
 		wp_enqueue_style(
 			'legacy-features-for-fse-widget-editor',
-			$this->url . '/public/css/editor.css',
+			plugins_url( '/public/css/editor.css', LFFF_FILE ),
 			[],
 			self::VERSION
 		);
@@ -122,7 +104,7 @@ final class Plugin {
 	public function classicMenuStyles() {
 		wp_enqueue_style(
 			'legacy-features-for-fse-classic-menu',
-			$this->url . '/public/css/menu.css',
+			plugins_url( '/public/css/menu.css', LFFF_FILE ),
 			[],
 			self::VERSION
 		);
@@ -136,7 +118,7 @@ final class Plugin {
 	 * @return void
 	 */
 	public function addEditorStyles() {
-		add_editor_style( [ $this->url . '/public/css/style.css' ] );
+		add_editor_style( [ plugins_url( '/public/css/style.css', LFFF_FILE ) ] );
 	}
 
 	/**
