@@ -86,7 +86,7 @@ final class Plugin {
 		add_action( 'wp_enqueue_scripts', [ $this, 'classicMenuStyles' ] );
 		add_action( 'admin_init', [ $this, 'addEditorStyles' ] );
 		add_action( 'admin_print_scripts', [ $this, 'adminScripts' ] );
-		add_action( 'admin_print_footer_scripts', [ $this, 'adminFooterScripts'] );
+		add_action( 'admin_print_footer_scripts', [ $this, 'adminFooterScripts' ] );
 		add_action( 'admin_footer', [ $this, 'adminFooterWidgets' ] );
 		add_action( 'enqueue_block_editor_assets', [ $this, 'editorAssets' ] );
 		add_action( 'after_setup_theme', [ $this, 'supportMenusAndWidgets' ] );
@@ -147,7 +147,7 @@ final class Plugin {
 	 * @return void
 	 */
 	public function adminStyles() {
-		if ( get_current_screen()->is_block_editor() ) {
+		if ( $this->is_block_editor() ) {
 			do_action( 'admin_print_styles-widgets.php' );
 		}
 	}
@@ -160,7 +160,7 @@ final class Plugin {
 	 * @return void
 	 */
 	public function adminScripts() {
-		if ( get_current_screen()->is_block_editor() ) {
+		if ( $this->is_block_editor() ) {
 			do_action( 'load-widgets.php' );
 			do_action( 'widgets.php' );
 			do_action( 'sidebar_admin_setup' );
@@ -176,7 +176,7 @@ final class Plugin {
 	 * @return void
 	 */
 	public function adminFooterScripts() {
-		if ( get_current_screen()->is_block_editor() ) {
+		if ( $this->is_block_editor() ) {
 			do_action( 'admin_print_footer_scripts-widgets.php' );
 		}
 	}
@@ -189,7 +189,7 @@ final class Plugin {
 	 * @return void
 	 */
 	public function adminFooterWidgets() {
-		if ( get_current_screen()->is_block_editor() ) {
+		if ( $this->is_block_editor() ) {
 			do_action( 'admin_footer-widgets.php' );
 		}
 	}
@@ -203,5 +203,22 @@ final class Plugin {
 	 */
 	public function supportMenusAndWidgets() {
 		add_theme_support( 'menus' );
+	}
+
+	/**
+	 * Check if the current screen runs the block editor.
+	 *
+	 * @since 1.0
+	 *
+	 * @return boolean True if the current screen runs the block editor, false otherwise.
+	 */
+	private function is_block_editor() {
+		$current_screen = get_current_screen();
+
+		if ( ! empty( $current_screen ) ) {
+			return $current_screen->is_block_editor();
+		}
+
+		return false;
 	}
 }
