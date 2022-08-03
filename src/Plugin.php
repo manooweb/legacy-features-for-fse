@@ -66,7 +66,6 @@ final class Plugin {
 	private function addHooks() {
 		add_action( 'admin_print_styles', [ $this, 'adminStyles' ] );
 		add_action( 'wp_enqueue_scripts', [ $this, 'classicMenuStyles' ] );
-		add_action( 'admin_init', [ $this, 'addEditorStyles' ] );
 		add_action( 'admin_print_scripts', [ $this, 'adminScripts' ] );
 		add_action( 'admin_print_footer_scripts', [ $this, 'adminFooterScripts' ] );
 		add_action( 'admin_footer', [ $this, 'adminFooterWidgets' ] );
@@ -79,19 +78,31 @@ final class Plugin {
 	 *
 	 * @since 1.0
 	 *
+	 * @global $wp_version
+	 *
 	 * @return void
 	 */
 	public function editorAssets() {
+		global $wp_version;
+
 		wp_enqueue_script( 'wp-widgets' );
 		wp_add_inline_script( 'wp-widgets', 'wp.widgets.registerLegacyWidgetBlock()' );
 
-		// Editor stylesheet.
-		wp_enqueue_style(
-			'legacy-features-for-fse-widget-editor',
-			plugins_url( '/public/css/editor.css', LFFF_FILE ),
-			[],
-			self::VERSION
-		);
+		if ( is_rtl() ) {
+			wp_enqueue_style(
+				'widget-editor-core-style',
+				home_url( '/wp-includes/css/dist/widgets/style-rtl.css' ),
+				[],
+				$wp_version
+			);
+		} else {
+			wp_enqueue_style(
+				'widget-editor-core-style',
+				home_url( '/wp-includes/css/dist/widgets/style.css' ),
+				[],
+				$wp_version
+			);
+		}
 	}
 
 	/**
@@ -108,17 +119,6 @@ final class Plugin {
 			[],
 			self::VERSION
 		);
-	}
-
-	/**
-	 * Loads editor style for cleaning up the block design.
-	 *
-	 * @since 1.0
-	 *
-	 * @return void
-	 */
-	public function addEditorStyles() {
-		add_editor_style( [ plugins_url( '/public/css/style.css', LFFF_FILE ) ] );
 	}
 
 	/**
