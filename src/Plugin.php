@@ -130,7 +130,7 @@ final class Plugin {
 	 */
 	public function adminStyles() {
 		if ( $this->isBlockEditor() ) {
-			do_action( 'admin_print_styles-widgets.php' );
+			do_action( 'admin_print_styles-widgets.php' ); // phpcs:ignore WordPress.NamingConventions.ValidHookName.UseUnderscores
 		}
 	}
 
@@ -143,10 +143,10 @@ final class Plugin {
 	 */
 	public function adminScripts() {
 		if ( $this->isBlockEditor() ) {
-			do_action( 'load-widgets.php' );
-			do_action( 'widgets.php' );
+			do_action( 'load-widgets.php' ); // phpcs:ignore WordPress.NamingConventions.ValidHookName.UseUnderscores
+			do_action( 'widgets.php' ); // phpcs:ignore WordPress.NamingConventions.ValidHookName.UseUnderscores
 			do_action( 'sidebar_admin_setup' );
-			do_action( 'admin_print_scripts-widgets.php' );
+			do_action( 'admin_print_scripts-widgets.php' ); // phpcs:ignore WordPress.NamingConventions.ValidHookName.UseUnderscores
 		}
 	}
 
@@ -159,7 +159,7 @@ final class Plugin {
 	 */
 	public function adminFooterScripts() {
 		if ( $this->isBlockEditor() ) {
-			do_action( 'admin_print_footer_scripts-widgets.php' );
+			do_action( 'admin_print_footer_scripts-widgets.php' ); // phpcs:ignore WordPress.NamingConventions.ValidHookName.UseUnderscores
 		}
 	}
 
@@ -172,7 +172,7 @@ final class Plugin {
 	 */
 	public function adminFooterWidgets() {
 		if ( $this->isBlockEditor() ) {
-			do_action( 'admin_footer-widgets.php' );
+			do_action( 'admin_footer-widgets.php' ); // phpcs:ignore WordPress.NamingConventions.ValidHookName.UseUnderscores
 		}
 	}
 
