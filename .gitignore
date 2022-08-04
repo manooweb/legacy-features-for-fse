@@ -1,5 +1,7 @@
 # Directories
 /.vscode
+/node_modules
+/public
 /tmp
 /vendor
 
@@ -7,6 +9,7 @@
 .DS_Store
 .phpunit.result.cache
 composer.lock
+package-lock.json
 DB-CONFIG
 LICENSE-CODES
 Thumbs.db

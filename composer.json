@@ -31,12 +31,14 @@
 		"lint": [
 			"@cs",
 			"@stan"
-		]
+		],
+		"build": "bin/build.sh"
 	},
 	"scripts-descriptions": {
 		"test":"Runs PHPUnit tests.",
 		"cs": "Runs PHPCS linter.",
 		"stan": "Runs PHPStan analysis.",
-		"lint": "Runs both PHPCS and PHPStan."
+		"lint": "Runs both PHPCS and PHPStan.",
+		"build": "Builds the project."
 	}
 }

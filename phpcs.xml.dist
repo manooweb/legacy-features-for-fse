@@ -4,7 +4,7 @@
 
 	<arg value="p"/><!-- Shows progress. -->
 	<arg name="colors"/><!-- Shows results with colors. -->
-	<arg name="extensions" value="php"/><!-- Limits to PHP files. -->
+	<arg name="extensions" value="php,js"/><!-- Limits to PHP and js files. -->
 
 	<!-- https://github.com/squizlabs/PHP_CodeSniffer/wiki/Usage -->
 	<file>.</file>
@@ -15,4 +15,11 @@
 	<!-- Run against the PSR-4 ruleset. -->
 	<!-- https://github.com/suin/phpcs-psr4-sniff -->
 	<arg name="basepath" value="."/>
+
+	<exclude-pattern>public/js/*</exclude-pattern>
+	<exclude-pattern>node_modules/*</exclude-pattern>
+	<exclude-pattern>vendor/*</exclude-pattern>
+	<exclude-pattern>tmp/*</exclude-pattern>
+	<exclude-pattern>webpack.config.js</exclude-pattern>
+
 </ruleset>

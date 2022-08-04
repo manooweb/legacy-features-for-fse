@@ -1,0 +1,49 @@
+{
+  "name": "@wpsyntex/legacy-features-for-fse",
+  "version": "1.0.0",
+  "description": "Adds legacy WordPress features for Full Site Editor(FSE)",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "npm run clean && webpack --mode production",
+    "build:dev": "npm run clean && webpack --mode development",
+    "dev": "npm run clean && webpack --mode development --watch",
+    "clean": "rimraf public/css public/js public/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/polylang/legacy-features-for-fse.git"
+  },
+  "keywords": [
+    "multilingual",
+    "bilingual",
+    "translate",
+    "translation",
+    "language",
+    "multilanguage",
+    "international",
+    "localization"
+  ],
+  "author": "WP Syntex",
+  "license": "GPL-3.0+",
+  "bugs": {
+    "url": "https://github.com/polylang/legacy-features-for-fse/issues"
+  },
+  "homepage": "https://github.com/polylang/legacy-features-for-fse#readme",
+  "devDependencies": {
+    "@wpsyntex/polylang-build-scripts": "^2.0.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.2.0",
+    "css-minimizer-webpack-plugin": "^4.0.0",
+    "mini-css-extract-plugin": "^2.3.0",
+    "postcss": "^8.3.6",
+    "rimraf": "^3.0.2",
+    "terser-webpack-plugin": "^5.2.4",
+    "webpack": "^5.52.1",
+    "webpack-cli": "^4.8.0"
+  }
+}
