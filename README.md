@@ -1,20 +1,20 @@
 # Legacy features for FSE
 
-Welcome to the Legacy features for FSE repository on GitHub. Here you can browse the source, discuss open issues and keep track of the development.
+Welcome to the Legacy features for FSE repository on GitHub. Here you can browse the source, discuss/open issues and keep track of the development.
 
-If you are not a developer, we recommend to [download legacy ](https://wordpress.org/plugins/legacy-features-for-fse/) from WordPress directory.
+If you are not a developer, we recommend to [download legacy features for FSE](https://wordpress.org/plugins/legacy-features-for-fse/) from WordPress directory.
 
 **Todo** Change the link if we change the name of the plugin before publishing on WordPress directory.
 
-## [What this plugin is for?](#legacy-features-for-fse-plugin)
+## [What this plugin is for](#legacy-features-for-fse-plugin)
 
-Currently this plugin adds the legacy widgets block in any kind of block editor especially the Full Site Editor(FSE) introduced by WordPress 5.9.
+Currently this plugin adds the legacy widgets block in any kind of block editor, more specifically the Full Site Editor(FSE) introduced in WordPress 5.9.
 
-By reintroducing the legacy widgets block, you can use some of the legacy widgets as `Naviagation Menu` for example.
+By reintroducing the legacy widgets block, you can use some of the legacy widgets as `Navigation Menu` for example.
 
 However with blocks theme, like Twenty Twenty-Two, you can't update menus anymore because this kind of theme doesn't support menus.
 
-This is why this plugin reintroduce the WordPress admin menus to be able to manage menus you want to use with the legacy widgets block.
+This is why this plugin reintroduces the WordPress admin menus to be able to manage menus you want to use with the legacy widgets block.
 
 This also allows to use external plugins legacy widgets which might not have already been converted to blocks.
 
@@ -39,4 +39,4 @@ The simplest way is to clone locally this repository and build it directly in yo
 4. Run the composer command: `composer build`
 5. Activate Legacy features for FSE as if you had installed it from WordPress.org:<br/>
 
-**Note**: we recommend for Windows users to use `Git Bash` provided with [Git for Windows](https://git-scm.com/download/win) instead of the command or powershell terminal.
+**Note**: we recommend Windows users to use `Git Bash` provided with [Git for Windows](https://git-scm.com/download/win) instead of the command or powershell terminals.

@@ -13,13 +13,13 @@ Make legacy features usable with Full Site Editor(FSE).
 
 == Description ==
 
-Currently this plugin adds the legacy widgets block in any kind of block editor especially the Full Site Editor(FSE) introduced by WordPress 5.9.
+Currently this plugin adds the legacy widgets block in any kind of block editor, more specifically the Full Site Editor(FSE) introduced in WordPress 5.9.
 
-By reintroducing the legacy widgets block, you can use some of the legacy widgets as Naviagation Menu for example.
+By reintroducing the legacy widgets block, you can use some of the legacy widgets as Navigation Menu for example.
 
 However with blocks theme, like Twenty Twenty-Two, you can't update menus anymore because this kind of theme doesn't support menus.
 
-This is why this plugin reintroduce the WordPress admin menus to be able to manage menus you want to use with the legacy widgets block.
+This is why this plugin reintroduces the WordPress admin menus to be able to manage menus you want to use with the legacy widgets block.
 
 This also allows to use external plugins legacy widgets which might not have already been converted to blocks.
 
