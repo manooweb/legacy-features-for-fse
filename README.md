@@ -15,6 +15,9 @@ By reintroducing the legacy widgets block, you can use some of the legacy widget
 However with blocks theme, like Twenty Twenty-Two, you can't update menus anymore because this kind of theme doesn't support menus.
 
 This is why this plugin reintroduce the WordPress admin menus to be able to manage menus you want to use with the legacy widgets block.
+
+This also allow to use external plugins legacy widgets which might not have already been converted to blocks.
+
 ## [Pre-requisites](#pre-requisites)
 
 Before starting, make sure that you have the following software installed and working on your computer:
