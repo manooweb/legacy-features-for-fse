@@ -25,6 +25,24 @@ final class Plugin {
 	const VERSION = '1.0';
 
 	/**
+	 * Suffix for minified assets or not. Depending on the debug environment.
+	 *
+	 * @var string
+	 */
+	private $assets_suffix;
+
+	/**
+	 * Constructor.
+	 *
+	 * @since 1.0
+	 *
+	 * @return void
+	 */
+	public function __construct() {
+		$this->assets_suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+	}
+
+	/**
 	 * Plugin init.
 	 *
 	 * @since 1.0
@@ -113,7 +131,7 @@ final class Plugin {
 	public function classicMenuStyles() {
 		wp_enqueue_style(
 			'legacy-features-for-fse-classic-menu',
-			plugins_url( '/public/css/menu.css', LFFF_FILE ),
+			plugins_url( '/public/css/menu' . $this->assets_suffix . '.css', LFFF_FILE ),
 			[],
 			self::VERSION
 		);
