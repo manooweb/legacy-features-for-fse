@@ -78,12 +78,10 @@ final class Plugin {
 	 *
 	 * @since 1.0
 	 *
-	 * @global $wp_version
-	 *
 	 * @return void
 	 */
 	public function editorAssets() {
-		global $wp_version;
+		$wp_version = get_bloginfo( ' version' );
 
 		wp_enqueue_script( 'wp-widgets' );
 		wp_add_inline_script( 'wp-widgets', 'wp.widgets.registerLegacyWidgetBlock()' );
