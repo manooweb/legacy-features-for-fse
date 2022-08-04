@@ -1,7 +1,7 @@
 {
-  "name": "@wpsyntex/polylang",
-  "version": "3.1.0",
-  "description": "Adds multilingual capability to WordPress",
+  "name": "@wpsyntex/legacy-features-for-fse",
+  "version": "1.0.0",
+  "description": "Adds legacy WordPress features for Full Site Editor(FSE)",
   "main": "index.js",
   "directories": {
     "test": "tests"
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/polylang/polylang.git"
+    "url": "git+https://github.com/polylang/legacy-features-for-fse.git"
   },
   "keywords": [
     "multilingual",
@@ -30,9 +30,9 @@
   "author": "WP Syntex",
   "license": "GPL-3.0+",
   "bugs": {
-    "url": "https://github.com/polylang/polylang/issues"
+    "url": "https://github.com/polylang/legacy-features-for-fse/issues"
   },
-  "homepage": "https://github.com/polylang/polylang#readme",
+  "homepage": "https://github.com/polylang/legacy-features-for-fse#readme",
   "devDependencies": {
     "@wpsyntex/polylang-build-scripts": "^2.0.3",
     "clean-webpack-plugin": "^4.0.0",
