@@ -2,7 +2,7 @@
 <ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="FSE5" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/squizlabs/PHP_CodeSniffer/master/phpcs.xsd">
 	<description>Coding standards for Polylang WPAI.</description>
 
-	<arg value="p"/><!-- Shows progress. -->
+	<arg value="ps"/><!-- Shows progress. -->
 	<arg name="colors"/><!-- Shows results with colors. -->
 	<arg name="extensions" value="php,js"/><!-- Limits to PHP and js files. -->
 
