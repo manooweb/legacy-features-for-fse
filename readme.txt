@@ -1,5 +1,5 @@
 === Legacy features for FSE ===
-Contributors: Chouby, manooweb, marianne38, sebastienserre, greglone, hugod
+Contributors: manooweb, hugod
 Donate link: https://polylang.pro
 Tags: multilingual, bilingual, translate, translation, language, multilanguage, international, localization
 Requires at least: 5.9
