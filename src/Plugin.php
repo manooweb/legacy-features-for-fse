@@ -101,18 +101,7 @@ final class Plugin {
 	public function editorAssets() {
 		wp_enqueue_script( 'wp-widgets' );
 		wp_add_inline_script( 'wp-widgets', 'wp.widgets.registerLegacyWidgetBlock()' );
-
-		if ( is_rtl() ) {
-			wp_enqueue_style(
-				'widget-editor-core-style',
-				home_url( '/wp-includes/css/dist/widgets/style-rtl.css' )
-			);
-		} else {
-			wp_enqueue_style(
-				'widget-editor-core-style',
-				home_url( '/wp-includes/css/dist/widgets/style.css' )
-			);
-		}
+		wp_enqueue_style( 'wp-widgets' );
 	}
 
 	/**
