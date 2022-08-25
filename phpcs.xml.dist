@@ -6,6 +6,9 @@
 	<arg name="colors"/><!-- Shows results with colors. -->
 	<arg name="extensions" value="php,js"/><!-- Limits to PHP and js files. -->
 
+	<config name="testVersion" value="5.6-"/>
+	<config name="minimum_supported_wp_version" value="5.9"/>
+
 	<!-- https://github.com/squizlabs/PHP_CodeSniffer/wiki/Usage -->
 	<file>.</file>
 
@@ -17,9 +20,5 @@
 	<arg name="basepath" value="."/>
 
 	<exclude-pattern>public/js/*</exclude-pattern>
-	<exclude-pattern>node_modules/*</exclude-pattern>
-	<exclude-pattern>vendor/*</exclude-pattern>
-	<exclude-pattern>tmp/*</exclude-pattern>
 	<exclude-pattern>webpack.config.js</exclude-pattern>
-
 </ruleset>
