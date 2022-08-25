@@ -26,7 +26,6 @@
 		}
 	},
 	"scripts": {
-		"test":"vendor/bin/phpunit",
 		"cs": "vendor/bin/phpcs",
 		"stan": "vendor/bin/phpstan analyze --memory-limit=1G",
 		"lint": [
@@ -36,7 +35,6 @@
 		"build": "bin/build.sh"
 	},
 	"scripts-descriptions": {
-		"test":"Runs PHPUnit tests.",
 		"cs": "Runs PHPCS linter.",
 		"stan": "Runs PHPStan analysis.",
 		"lint": "Runs both PHPCS and PHPStan.",
