@@ -16,8 +16,7 @@
 	},
 	"require-dev": {
 		"wpsyntex/polylang-cs": "dev-main",
-		"wpsyntex/polylang-phpstan": "dev-master",
-		"wpsyntex/polylang-stubs": "dev-master"
+		"szepeviktor/phpstan-wordpress": "^1.0"
 	},
 	"autoload": {
 		"psr-4": {
