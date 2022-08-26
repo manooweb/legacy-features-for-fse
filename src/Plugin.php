@@ -99,26 +99,9 @@ final class Plugin {
 	 * @return void
 	 */
 	public function editorAssets() {
-		$wp_version = get_bloginfo( ' version' );
-
 		wp_enqueue_script( 'wp-widgets' );
 		wp_add_inline_script( 'wp-widgets', 'wp.widgets.registerLegacyWidgetBlock()' );
-
-		if ( is_rtl() ) {
-			wp_enqueue_style(
-				'widget-editor-core-style',
-				home_url( '/wp-includes/css/dist/widgets/style-rtl.css' ),
-				[],
-				$wp_version
-			);
-		} else {
-			wp_enqueue_style(
-				'widget-editor-core-style',
-				home_url( '/wp-includes/css/dist/widgets/style.css' ),
-				[],
-				$wp_version
-			);
-		}
+		wp_enqueue_style( 'wp-widgets' );
 	}
 
 	/**
