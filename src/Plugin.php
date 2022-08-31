@@ -18,13 +18,6 @@ defined( 'ABSPATH' ) || exit;
 final class Plugin {
 
 	/**
-	 * The plugin version.
-	 *
-	 * @var string
-	 */
-	const VERSION = '1.0';
-
-	/**
 	 * Suffix for minified assets or not. Depending on the debug environment.
 	 *
 	 * @var string
@@ -116,7 +109,7 @@ final class Plugin {
 			'legacy-features-for-fse-classic-menu',
 			plugins_url( '/public/css/menu' . $this->assets_suffix . '.css', LFFF_FILE ),
 			[],
-			self::VERSION
+			LFFF_VERSION
 		);
 	}
 
