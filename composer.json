@@ -1,6 +1,6 @@
 {
-	"name": "wpsyntex/legacy-features-fse",
-	"description": "Legacy features for FSE.",
+	"name": "wpsyntex/fse-classic",
+	"description": "Classic features for FSE.",
 	"license": "GPL-3.0-or-later",
 	"homepage": "https://polylang.pro",
 	"type": "wordpress-plugin",
@@ -21,7 +21,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"WP_Syntex\\Legacy_Features_for_FSE\\": "src/"
+			"WP_Syntex\\FSE_Classic\\": "src/"
 		}
 	},
 	"scripts": {

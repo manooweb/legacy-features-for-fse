@@ -3,10 +3,10 @@
  * Main plugin class.
  * php version 5.6
  *
- * @package WP_Syntex\Legacy_Features_for_FSE
+ * @package WP_Syntex\FSE_Classic
  */
 
-namespace WP_Syntex\Legacy_Features_for_FSE;
+namespace WP_Syntex\FSE_Classic;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -50,7 +50,7 @@ final class Plugin {
 		 *
 		 * @param Plugin $plugin Main class instance.
 		 */
-		do_action_ref_array( 'legacy_features_for_fse_before_init', [ &$this ] );
+		do_action_ref_array( 'fse_classic_before_init', [ &$this ] );
 
 		if ( wp_is_block_theme() ) {
 			// Loads the plugin only if the theme is a block theme.
@@ -64,7 +64,7 @@ final class Plugin {
 		 *
 		 * @param Plugin $plugin Main class instance.
 		 */
-		do_action_ref_array( 'legacy_features_for_fse_init', [ &$this ] );
+		do_action_ref_array( 'fse_classic_init', [ &$this ] );
 	}
 
 	/**
@@ -106,10 +106,10 @@ final class Plugin {
 	 */
 	public function classicMenuStyles() {
 		wp_enqueue_style(
-			'legacy-features-for-fse-classic-menu',
-			plugins_url( '/public/css/menu' . $this->assets_suffix . '.css', LFFF_FILE ),
+			'fse-classic-menu',
+			plugins_url( '/public/css/menu' . $this->assets_suffix . '.css', FSE_CLASSIC_FILE ),
 			[],
-			LFFF_VERSION
+			FSE_CLASSIC_VERSION
 		);
 	}
 

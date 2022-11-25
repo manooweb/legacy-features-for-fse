@@ -1,5 +1,5 @@
 {
-  "name": "@wpsyntex/legacy-features-for-fse",
+  "name": "@wpsyntex/fse-classic",
   "version": "1.0.0",
   "description": "Adds legacy WordPress features for Full Site Editor(FSE)",
   "main": "index.js",
@@ -15,24 +15,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/polylang/legacy-features-for-fse.git"
+    "url": "git+https://github.com/polylang/fse-classic.git"
   },
   "keywords": [
-    "multilingual",
-    "bilingual",
-    "translate",
-    "translation",
-    "language",
-    "multilanguage",
-    "international",
-    "localization"
+    "site editor",
+    "fse"
   ],
   "author": "WP Syntex",
   "license": "GPL-3.0+",
   "bugs": {
-    "url": "https://github.com/polylang/legacy-features-for-fse/issues"
+    "url": "https://github.com/polylang/fse-classic/issues"
   },
-  "homepage": "https://github.com/polylang/legacy-features-for-fse#readme",
+  "homepage": "https://github.com/polylang/fse-classic#readme",
   "devDependencies": {
     "@wpsyntex/polylang-build-scripts": "^2.0.3",
     "clean-webpack-plugin": "^4.0.0",
