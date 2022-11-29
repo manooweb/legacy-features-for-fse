@@ -1,4 +1,4 @@
-=== Legacy features for FSE ===
+=== FSE Classic ===
 Contributors: manooweb, hugod
 Donate link: https://polylang.pro
 Tags: block, widget, menu, fse
