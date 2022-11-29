@@ -1,4 +1,4 @@
-# TravisCI configuration for polylang/legacy-features-for-fse
+# TravisCI configuration for polylang/fse-classic
 
 if: "branch = main"
 
