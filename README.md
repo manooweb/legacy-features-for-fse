@@ -1,14 +1,14 @@
-# FSE Classic
+# Site Editor Classic Features
 
-Welcome to the FSE Classic repository on GitHub. Here you can browse the source, discuss/open issues and keep track of the development.
+Welcome to the Site Editor Classic Features repository on GitHub. Here you can browse the source, discuss/open issues and keep track of the development.
 
-If you are not a developer, we recommend to [download FSE Classic](https://wordpress.org/plugins/fse-classic/) from WordPress directory.
+If you are not a developer, we recommend to [download Site Editor Classic Features](https://wordpress.org/plugins/fse-classic/) from WordPress directory.
 
 **Todo** Change the link if we change the name of the plugin before publishing on WordPress directory.
 
 ## [What this plugin is for](#fse-classic)
 
-Currently this plugin adds the legacy widgets block in any kind of block editor, more specifically the Full Site Editor(FSE) introduced in WordPress 5.9.
+Currently this plugin adds the legacy widgets block in any kind of block editor, more specifically the Site Editor (FSE) introduced in WordPress 5.9.
 
 By reintroducing the legacy widgets block, you can use some of the legacy widgets as `Navigation Menu` for example.
 
@@ -27,7 +27,7 @@ Before starting, make sure that you have the following software installed and wo
 3. [Node.js](https://nodejs.org/en/download/) which provides [NPM](https://docs.npmjs.com/). They are both required by [Webpack](https://webpack.js.org/guides/getting-started/) that FSE Classic uses to build and minify CSS and javascript files. We recommend to install Node.js LTS version.
 4. [Composer](https://getcomposer.org/doc/00-intro.md) because FSE Classic uses its autoloader to work and it is required to install development tools such as PHP CodeSniffer that ensures your code follows coding standards.
 
-## [How to set up FSE Classic](#how-to-setup-fse-classic)
+## [How to set up Site Editor Classic Features](#how-to-setup-fse-classic)
 
 The simplest way is to clone locally this repository and build it directly in your local WordPress instance by following the steps below:
 
