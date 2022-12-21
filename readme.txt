@@ -1,7 +1,7 @@
-=== FSE Classic ===
+=== Site Editor Classic Features ===
 Contributors: manooweb, hugod
 Donate link: https://polylang.pro
-Tags: block, widget, menu, fse
+Tags: block, widget, menu, fse, site editor
 Requires at least: 5.9
 Tested up to: 6.1
 Requires PHP: 5.6
@@ -9,11 +9,11 @@ Stable tag: 1.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Make legacy widgets and menus usable in Full Site Editor (FSE).
+Make legacy widgets and menus usable in Site Editor (FSE).
 
 == Description ==
 
-This plugin, usable only with a block theme like Twenty Twenty-Two, adds the legacy widgets block in the Full Site Editor(FSE).
+This plugin, usable only with a block theme like Twenty Twenty-Two, adds the legacy widgets block in the Site Editor (FSE).
 
 With the legacy widgets block, you can use the legacy widgets as Navigation Menu for example.
 
