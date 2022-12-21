@@ -1,6 +1,6 @@
 <?php
 /**
- * FSE Classic
+ * Site Editor Classic Features
  * php version        5.6
  *
  * @package           WP_Syntex\FSE Classic
@@ -8,9 +8,9 @@
  * @license           GPL-3.0-or-later
  *
  * @wordpress-plugin
- * Plugin Name:       FSE Classic
+ * Plugin Name:       Site Editor Classic Features
  * Plugin URI:        https://polylang.pro
- * Description:       Classic Features for FSE.
+ * Description:       Allows to use classic widgets and menus in Site Editor.
  * Version:           1.0
  * Requires at least: 5.9
  * Requires PHP:      5.6
