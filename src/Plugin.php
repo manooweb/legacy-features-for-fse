@@ -184,9 +184,9 @@ final class Plugin {
 	 *
 	 * @since 1.0
 	 *
-	 * @return boolean True if the current screen runs the block editor, false otherwise.
+	 * @return bool True if the current screen runs the block editor, false otherwise.
 	 */
-	private function isBlockEditor() {
+	private function isBlockEditor(): bool {
 		$current_screen = get_current_screen();
 
 		if ( ! empty( $current_screen ) ) {
