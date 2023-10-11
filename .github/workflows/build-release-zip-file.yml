@@ -1,8 +1,12 @@
 name: Build release zip
 
 on:
+  ## Build and upload zip on new release.
   release:
     types: [published]
+
+  ## Build zip on demand.
+  workflow_dispatch:
 
 jobs:
   build:
@@ -42,6 +46,7 @@ jobs:
         SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
 
     - name: Upload release asset
+      if: github.event_name == 'release' ## Don't upload zip if no release is created.
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
