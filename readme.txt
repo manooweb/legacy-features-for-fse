@@ -3,7 +3,7 @@ Contributors: manooweb, hugod
 Donate link: https://polylang.pro
 Tags: block, widget, menu, fse, site editor
 Requires at least: 5.9
-Tested up to: 6.4
+Tested up to: 6.4.3
 Requires PHP: 7.0
 Stable tag: 1.1
 License: GPLv3 or later
@@ -22,6 +22,10 @@ This is why this plugin reintroduces the WordPress legacy Menus screen to be abl
 This also allows to use external plugins legacy widgets which might not have already been converted to blocks.
 
 == Changelog ==
+
+= 1.1 =
+
+* Update readme, tested up to WordPress 6.4.3.
 
 = 1.0 =
 
