@@ -11,7 +11,7 @@
  * Plugin Name:       Site Editor Classic Features
  * Plugin URI:        https://polylang.pro
  * Description:       Allows to use classic widgets and menus in Site Editor.
- * Version:           1.1
+ * Version:           1.0
  * Requires at least: 5.9
  * Requires PHP:      7.0
  * Author:            WP SYNTEX
@@ -31,7 +31,7 @@ namespace WP_Syntex\FSE_Classic;
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'FSE_CLASSIC_VERSION', '1.1' );
+define( 'FSE_CLASSIC_VERSION', '1.0' );
 
 define( 'FSE_CLASSIC_FILE', __FILE__ );
 
