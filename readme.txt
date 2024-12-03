@@ -3,7 +3,7 @@ Contributors: manooweb, hugod
 Donate link: https://polylang.pro
 Tags: block, widget, menu, fse, site editor
 Requires at least: 5.9
-Tested up to: 6.4.3
+Tested up to: 6.7
 Requires PHP: 7.0
 Stable tag: 1.0
 License: GPLv3 or later
