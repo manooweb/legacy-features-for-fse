@@ -1,0 +1,57 @@
+name: Build release zip
+
+on:
+  ## Build and upload zip on new release.
+  release:
+    types: [published]
+
+  ## Build zip on demand.
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Generate zip and upload it to GitHub release
+
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Setup Node 16
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
+
+    - name: Set up PHP 8.0
+      uses: shivammathur/setup-php@v2
+      with:
+        coverage: none
+        php-version: 8.0
+
+    - name: Build plugin
+      run: |
+        composer install --no-dev
+        npm install
+        npm run build --if-present
+
+    - name: Generate zip
+      id: deploy
+      uses: 10up/action-wordpress-plugin-deploy@stable
+      with:
+        generate-zip: true
+        dry-run: true ## /!\ Don't commit to SVN /!\
+      env:
+        SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+        SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+
+    - name: Upload release asset
+      if: github.event_name == 'release' ## Don't upload zip if no release is created.
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ github.event.release.upload_url }}
+        asset_path: ${{ steps.deploy.outputs.zip-path }}
+        asset_name: ${{ github.event.repository.name }}.zip
+        asset_content_type: application/zip
